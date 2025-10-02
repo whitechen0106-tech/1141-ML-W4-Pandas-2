@@ -53,7 +53,7 @@ def filter_and_analyze_data(df):
 
     # TODO 4.2: 找出總分最高的學生
     max_score = df['總分'].max()
-    top_student = df['總分'] == max_score
+    top_student = df[df['總分'] == max_score]
     print(top_student, "\n")
 
     return {
