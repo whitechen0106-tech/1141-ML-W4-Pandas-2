@@ -52,7 +52,8 @@ def filter_and_analyze_data(df):
     print(summary, "\n")
 
     # TODO 4.2: 找出總分最高的學生
-    top_student = df.loc[df["總分"].idxmax()]
+    max_score = df['總分'].max()
+    top_student = df['總分'] == max_score
     print(top_student, "\n")
 
     return {
